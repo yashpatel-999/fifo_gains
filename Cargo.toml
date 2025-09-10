@@ -1,0 +1,11 @@
+[package]
+name = "fifo_pnl_pg"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "macros", "postgres", "chrono", "rust_decimal"] }
+rust_decimal = { version = "1", features = ["serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+dotenvy = "0.15"
