@@ -22,7 +22,7 @@ pub async fn fetch_transactions(pool: &PgPool) -> Result<Vec<Transaction>, sqlx:
             product: r.product,
             txn_type: ttype,
             quantity: r.quantity as u32,
-            price: r.price,   // ✅ Decimal
+            price: r.price,
         });
     }
     Ok(txs)
